@@ -1,26 +1,253 @@
-
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Santosh Dronamraju - Resume</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; }
-        h1, h2 { color: #333; }
-        p { line-height: 1.6; }
-        .section { margin-bottom: 20px; }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Santosh Dronamraju | Engineering Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sidebar: "#0f172a"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    <div class='container'>
-        <h1>Santosh Dronamraju</h1>
-        <p>Atlanta, Georgia | +1 (470) 908-7279 | mrdsantosh@yahoo.com | Linkedin</p>
-        <div class='section'>
-            <h2>Resume</h2>
-            <p>Santosh Dronamraju</p><p>Atlanta, Georgia | +1 (470) 908-7279 | mrdsantosh@yahoo.com | Linkedin</p><p>Software Engineering Manager with 20 years of Industry Experience | Leading successful teams in delivering cutting-edge software solutions in Microservices and Data Processing | Strong technical background as a former SDE.</p><p>WORK EXPERIENCE</p><p>Software Engineering Manager at Candescent, Atlanta (GA) Sep 2024 - Present</p><p>Software Engineering Manager at NCR Voyix, Atlanta (GA) Jul 2019 - Sep 2024</p><p>Digital Banking Interface application</p><p>- Led a team of 35, including 2 engineering managers leading teams of 7 each, responsible for performance evaluation, career development, and growth.</p><p>- Collaborate across teams covering Product, Design, Engineering, and other departments to align organizational goals with product objectives.</p><p>- Interviewed, hired, and onboarded 12 new engineers.</p><p>- Spearheaded cloud migration of 25+ legacy applications.</p><p>- Implemented 10+ banking interfaces, boosting scalability, availability, and reliability.</p><p>Software Engineering Manager at NCR, Hyderabad, India Jan 2016 - Jul 2019</p><p>Self-Checkout application</p><p>- Led an engineering team of 10 people.</p><p>- Responsible for building Self-Checkout mobile application development, maintenance, and new customer onboarding.</p><p>- Coordinated roadmap between site and mobile application to improve consistency and user experience.</p><p>- Improved team workflow by adopting continuous integration, reducing human coding errors by 80%.</p><p>Software Engineer  May 2012 - Jan 2016</p><p>- Developed mobile-optimized landing pages & ran quality assurance checks for the app in its early stages.</p><p>- Mentored 2 new graduate software engineers individually, aligning their career goals with the company’s trajectory, and highlighting growth areas.</p><p>Software Engineer at Cognizant Technology Solutions, Hyderabad, India May 2011 - May 2012</p><p>Quotation and Order Fulfilment Application</p><p>- Developed create quotes and orders for eBooks and CSP journals pages, Tested software for bugs and documented processes, increasing efficiency by 15%.</p><p>- Helped build improved software to match users to order fulfilment, boosting sales & user retention.</p><p>System Analyst at GE Energy, Hyderabad, India Apr 2006 - May 2011</p><p>Manufacturing Execution System</p><p>- Designed and developed a solution for automating Bill of Material explosion process, which reduced ready-to-ship (RTS) by 72 hours per user and is also equipped with better data validation, error reporting and auto FTP utility.</p><p>- Improved response time of report generation process of Material availability metrics by 90% as part of Six Sigma Green Belt project.</p><p>- Improved export to excel development time for 45 modules in MES by 33%.</p><p>SKILLS</p><p>Technical Skills: Java full stack, Nodejs, SQL, NoSQL, GitHub, HTML5, CSS, JavaScript, Google Cloud Platform.</p><p>Tools: Scaled Agile, Scrum, Kanban and Waterfall methodologies, continuous integration & delivery.</p><p>Team Management: Proven ability to build, motivate, and mentor high-performing engineering teams.</p><p>Project Management: Planning, execution, and monitoring complex software projects within budget and timelines.</p><p>Stakeholder Management: Effective communication and collaboration with cross-functional teams, including product management, design, and QA.</p><p>EDUCATION</p><p>Master of Science in Information Technology, Manipal University - India Aug 2000 - Jan 2003</p>
+
+<body class="bg-gray-100 text-gray-800">
+  <div class="flex min-h-screen flex-col md:flex-row">
+
+    <!-- Sidebar -->
+    <aside class="w-full md:w-72 bg-sidebar text-white px-6 py-8 md:fixed md:h-screen overflow-auto">
+      <h1 class="text-2xl font-bold">Santosh Babu Dronamraju</h1>
+      <p class="text-sm text-gray-300 mt-1">SW Engineering Manager II</p>
+
+      <div class="mt-6 text-sm space-y-2">
+        <p>📍 Atlanta, GA, USA</p>
+        <p>
+          📧
+          <a href="mailto:mrdsantosh@yahoo.com" class="underline">
+            mrdsantosh@yahoo.com
+          </a>
+        </p>
+        <p>📞 +1 (470) 908‑7279</p>
+        <p>
+          🔗
+          <a href="https://www.linkedin.com/in/mrdsantosh/" target="_blank" class="underline">
+            LinkedIn
+          </a>
+        </p>
+      </div>
+
+      <nav class="mt-8 space-y-2 text-sm">
+        <a href="#summary" class="block text-gray-300 hover:text-white">Professional Summary</a>
+        <a href="#skills" class="block text-gray-300 hover:text-white">Skills</a>
+        <a href="#experience" class="block text-gray-300 hover:text-white">Experience</a>
+        <a href="#certifications" class="block text-gray-300 hover:text-white">Certifications</a>
+        <a href="#education" class="block text-gray-300 hover:text-white">Education</a>
+        <a href="#achievements" class="block text-gray-300 hover:text-white">Achievements</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 md:ml-72 px-6 py-10 max-w-5xl">
+
+      <!-- Professional Summary -->
+      <section id="summary" class="mb-14">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Professional Summary</h2>
+
+        <p class="mb-4 font-medium">
+          Engineering Manager having experience leading the design, development, and delivery
+          of scalable, cloud‑based SaaS platforms.
+        </p>
+
+        <p class="mb-4">
+          Proven at managing high‑performing engineering teams while balancing technical depth,
+          delivery excellence, and business outcomes. Provide strong people and technical leadership
+          by setting clear expectations, coaching engineers, and embedding best practices across
+          design reviews, coding standards, testing, and operational readiness.
+        </p>
+
+        <p class="mb-4">
+          Experienced in leading cloud‑native and microservices‑based systems with a focus on
+          reliability, observability, cost efficiency, security guardrails, and graceful scaling.
+          Partner closely with SRE, Product, and Architecture to define SLIs/SLOs, manage risk,
+          and ensure production stability.
+        </p>
+
+        <p class="mb-4">
+          Hands‑on leader with working knowledge of modern SaaS stacks including Java ecosystems,
+          REST APIs, CI/CD pipelines, container platforms, and public cloud services.
+        </p>
+
+        <p>
+          Lead adoption of AI‑assisted capabilities within products and engineering workflows,
+          including data‑driven features, context engineering, evaluation strategies, and
+          feedback loops with focus on responsible and practical AI usage.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="mb-14">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-6">Skills</h2>
+
+        <div class="space-y-4 text-sm">
+          <div><strong>People Management & Leadership:</strong> Performance management, building high‑performing teams, technical roadmaps, change management, stakeholder management</div>
+          <div><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, HTML5, CSS3</div>
+          <div><strong>DevOps / Cloud:</strong> Docker, Kubernetes, GCP (GKE, Pub/Sub, Dataflow, Cloud Build, Cloud Run), GitHub</div>
+          <div><strong>Databases:</strong> Postgres, MySQL, Redis, BigQuery, Bigtable, AlloyDB</div>
+          <div><strong>Frameworks & Libraries:</strong> Spring Boot, Spring JPA, Node.js, AngularJS, ReactJS, Web Components, Apache Beam, GraphQL, REST, SOAP</div>
+          <div><strong>Tools & Practices:</strong> Agile, SAFe, Jira, Confluence, Postman, Jenkins, SonarQube, JMeter, Grafana</div>
+          <div><strong>IDE:</strong> Cursor AI, GitHub Copilot</div>
         </div>
-    </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="mb-14">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-6">Experience</h2>
+
+        <!-- Candescent -->
+        <div class="mb-10">
+          <h3 class="text-lg font-semibold">Candescent (formerly NCR Corporation)</h3>
+          <p class="text-sm text-gray-600 mb-2">
+            SW Engineering Manager II • May 2012 – Present • Atlanta, USA
+          </p>
+
+          <p class="font-medium mt-3 mb-2">
+            Transaction Store – Cloud‑native banking data platform
+          </p>
+
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Designed and delivered intelligent banking datastore with semantic search.</li>
+            <li>Established streaming and batch ingestion pipelines using Pub/Sub and Dataflow.</li>
+            <li>Implemented secure governance including PII tokenization and DLP pipelines.</li>
+            <li>Scaled platform to support multi‑FI onboarding with 99.9% availability.</li>
+            <li>Enabled similarity search, anomaly detection, and customer 360 exploration.</li>
+          </ul>
+
+          <p class="font-medium mt-6 mb-2">Digital Banking – Interfaces</p>
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Managed large distributed scrum and production teams.</li>
+            <li>Drove software standards, release planning, risk communication.</li>
+            <li>Led hiring, onboarding, performance management and coaching.</li>
+          </ul>
+
+          <p class="font-medium mt-6 mb-2">SelfServ® Checkout (SCO)</p>
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Led multiple SCRUM teams (~25 engineers) for POS and payment integrations.</li>
+            <li>Drove mobile app development and customer onboarding.</li>
+            <li>Technology exposure: C++, Linux, Android, iOS.</li>
+          </ul>
+
+          <p class="font-medium mt-6 mb-2">APTRA™ Vision Migration</p>
+          <ul class="list-disc ml-5 space-y-1">
+            <li>SCRUM Master for migration to Node.js, AngularJS, Spring REST.</li>
+            <li>Led sprint planning, backlog prioritization, burn‑down tracking.</li>
+          </ul>
+
+          <p class="font-medium mt-6 mb-2">APTRA™ Self‑Scheduler</p>
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Led NEP migration and mobile version development.</li>
+            <li>Mentored teams and drove reusability and simplification.</li>
+          </ul>
+        </div>
+
+        <!-- Cognizant -->
+        <div class="mb-10">
+          <h3 class="text-lg font-semibold">Cognizant Technology Solutions</h3>
+          <p class="text-sm text-gray-600 mb-2">
+            Project Lead • May 2011 – May 2012 • Hyderabad, India
+          </p>
+
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Led ITHAKA quotation and fulfillment platform.</li>
+            <li>Owned scope, estimation, scheduling, QA and integration.</li>
+            <li>Delivered Global Credit Card Enrollment applications.</li>
+          </ul>
+        </div>
+
+        <!-- GE -->
+        <div class="mb-10">
+          <h3 class="text-lg font-semibold">GE India Innovation Center</h3>
+          <p class="text-sm text-gray-600 mb-2">
+            System Analyst • Apr 2006 – May 2011 • Hyderabad, India
+          </p>
+
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Led Manufacturing Execution Systems across 25 GE plants.</li>
+            <li>Built MES Release Tool automating zero‑defect releases.</li>
+            <li>Developed Design Record Books and NCM systems.</li>
+          </ul>
+        </div>
+
+        <!-- IBM -->
+        <div class="mb-10">
+          <h3 class="text-lg font-semibold">IBM India Pvt. Ltd.</h3>
+          <p class="text-sm text-gray-600 mb-2">
+            Senior Developer • Dec 2004 – Apr 2006 • Bangalore, India
+          </p>
+
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Developed and supported Sprint telecom network systems.</li>
+            <li>Optimized Oracle SQL performance and backend services.</li>
+          </ul>
+        </div>
+
+        <!-- TechSpan / CMC -->
+        <div>
+          <h3 class="text-lg font-semibold">TechSpan / CMC Ltd.</h3>
+          <p class="text-sm text-gray-600 mb-2">
+            Senior Associate / Project Assignee • 2003 – 2004 • India
+          </p>
+
+          <ul class="list-disc ml-5 space-y-1">
+            <li>Worked on stock trading, FIX protocol, and banking systems.</li>
+            <li>Developed ATM, ABB, SMS Banking and Tele‑Banking solutions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications" class="mb-14">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Certifications</h2>
+        <ul class="list-disc ml-5 space-y-1">
+          <li>SAFe Agilist</li>
+          <li>Certified Scrum Master (CSM)</li>
+          <li>PMP – Project Management Professional</li>
+          <li>Six Sigma Green Belt</li>
+          <li>Sun Certified Java Programmer (SCJP)</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="mb-14">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Education</h2>
+        <ul class="list-disc ml-5 space-y-1">
+          <li>MIT – Master of Information Technology, Manipal University (2000–2003)</li>
+          <li>MSBM – MSc in Business Management, Sri Venkateswara University (2000–2002)</li>
+          <li>BCom – Bachelor of Commerce, Sri Venkateswara University (1997–2000)</li>
+        </ul>
+      </section>
+
+      <!-- Achievements -->
+      <section id="achievements">
+        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Achievements</h2>
+        <ul class="list-disc ml-5 space-y-1">
+          <li>M1 Trailblazer Cup for Hypothesis‑Driven Development.</li>
+          <li>Multiple NCR / GE awards for innovation, delivery, and productivity.</li>
+          <li>Reduced application response times by up to 90%.</li>
+          <li>Saved thousands of engineering hours through automation.</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
 </body>
 </html>
