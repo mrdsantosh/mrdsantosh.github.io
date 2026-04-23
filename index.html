@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Santosh Dronamraju | Engineering Manager</title>
+  <title>Santosh Dronamraju Engineering Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Tailwind CSS CDN -->
@@ -10,6 +10,7 @@
 
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -19,52 +20,82 @@
       }
     }
   </script>
+
+  <!-- Apply saved/system theme early -->
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
-  <div class="flex min-h-screen flex-col md:flex-row">
+<body class="bg-gray-100 dark:bg-slate-900 text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen flex-col md:flex-row">
 
-    <!-- Sidebar -->
-    <aside class="w-full md:w-72 bg-sidebar text-white px-6 py-8 md:fixed md:h-screen overflow-auto">
-	  <div class="flex justify-center mb-6">
-		<img
-		  src="PHOTO.jpg"
-		  alt="Profile photo"
-		  class="w-28 h-28 rounded-full object-cover border-2 border-white shadow-md"
-		/>
-	  </div>
-      <h1 class="text-2xl font-bold">Santosh Babu Dronamraju</h1>
-      <p class="text-sm text-gray-300 mt-1">SW Engineering Manager II</p>
+  <!-- Sidebar -->
+  <aside class="w-full md:w-72 bg-sidebar text-white px-6 py-8 md:fixed md:h-screen overflow-auto">
+    <div class="flex justify-center mb-6">
+      <img
+        src="PHOTO.jpg"
+        alt="Profile photo"
+        class="w-28 h-28 rounded-full object-cover border-2 border-white shadow-md"
+      />
+    </div>
 
-      <div class="mt-6 text-sm space-y-2">
-        <p>📍 Atlanta, GA, USA</p>
-        <p>
-          📧
-          <a href="mailto:mrdsantosh@yahoo.com" class="underline">
-            mrdsantosh@yahoo.com
-          </a>
-        </p>
-        <p>📞 +1 (470) 908‑7279</p>
-        <p>
-          🔗
-          <a href="https://www.linkedin.com/in/mrdsantosh/" target="_blank" class="underline">
-            LinkedIn
-          </a>
-        </p>
-      </div>
+    <h1 class="text-2xl font-bold">Santosh Babu Dronamraju</h1>
+    <p class="text-sm text-gray-300 mt-1">SW Engineering Manager II</p>
 
-      <nav class="mt-8 space-y-2 text-sm">
-        <a href="#summary" class="block text-gray-300 hover:text-white">Professional Summary</a>
-        <a href="#skills" class="block text-gray-300 hover:text-white">Skills</a>
-        <a href="#experience" class="block text-gray-300 hover:text-white">Experience</a>
-        <a href="#certifications" class="block text-gray-300 hover:text-white">Certifications</a>
-        <a href="#education" class="block text-gray-300 hover:text-white">Education</a>
-        <a href="#achievements" class="block text-gray-300 hover:text-white">Achievements</a>
-      </nav>
-    </aside>
+    <div class="mt-6 text-sm space-y-2">
+      <p>📍 Atlanta, GA, USA</p>
+      <p>
+        📧
+        <a href="mailto:mrdsantosh@yahoo.com" class="underline">
+          mrdsantosh@yahoo.com
+        </a>
+      </p>
+      <p>📞 +1 (470) 908‑7279</p>
+      <p>
+        🔗
+        <a href="https://www.linkedin.com/in/mrdsantosh/" target="_blank" class="underline">
+          LinkedIn
+        </a>
+      </p>
+    </div>
 
-    <!-- Main Content -->
-    <main class="flex-1 md:ml-72 px-6 py-10 max-w-5xl">
+    <nav class="mt-8 space-y-2 text-sm">
+      <a href="#summary" class="block text-gray-300 hover:text-white">Professional Summary</a>
+      <a href="#skills" class="block text-gray-300 hover:text-white">Skills</a>
+      <a href="#experience" class="block text-gray-300 hover:text-white">Experience</a>
+      <a href="#certifications" class="block text-gray-300 hover:text-white">Certifications</a>
+      <a href="#education" class="block text-gray-300 hover:text-white">Education</a>
+      <a href="#achievements" class="block text-gray-300 hover:text-white">Achievements</a>
+    </nav>
+  </aside>
+
+  <!-- Main area -->
+  <div class="flex-1 md:ml-72">
+
+    <!-- Fixed top nav (blended) -->
+    <header
+      class="fixed top-0 right-0 md:left-72 left-0 h-14
+             bg-gray-100 dark:bg-slate-900
+             flex items-center justify-end px-6 z-30">
+      <button
+        onclick="toggleDarkMode()"
+        class="text-sm text-gray-600 dark:text-gray-300
+               px-3 py-1 rounded
+               hover:bg-gray-200/60 dark:hover:bg-slate-700/60
+               transition">
+        🌗 Dark mode
+      </button>
+    </header>
+
+    <!-- Main Content (UNCHANGED CONTENT BELOW) -->
+    <main class="flex-1 px-6 py-10 pt-20 max-w-5xl">
 
       <!-- Professional Summary -->
       <section id="summary" class="mb-14">
@@ -104,7 +135,6 @@
       <!-- Skills -->
       <section id="skills" class="mb-14">
         <h2 class="text-2xl font-semibold border-b pb-2 mb-6">Skills</h2>
-
         <div class="space-y-4 text-sm">
           <div><strong>People Management & Leadership:</strong> Performance management, building high‑performing teams, technical roadmaps, change management, stakeholder management</div>
           <div><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, HTML5, CSS3</div>
@@ -123,7 +153,7 @@
         <!-- Candescent -->
         <div class="mb-10">
           <h3 class="text-lg font-semibold">Candescent (formerly NCR Corporation)</h3>
-          <p class="text-sm text-gray-600 mb-2">
+          <p class="text-sm text-gray-400 mb-2">
             SW Engineering Manager II • May 2012 – Present • Atlanta, USA
           </p>
 
@@ -169,7 +199,7 @@
         <!-- Cognizant -->
         <div class="mb-10">
           <h3 class="text-lg font-semibold">Cognizant Technology Solutions</h3>
-          <p class="text-sm text-gray-600 mb-2">
+          <p class="text-sm text-gray-400 mb-2">
             Project Lead • May 2011 – May 2012 • Hyderabad, India
           </p>
 
@@ -183,7 +213,7 @@
         <!-- GE -->
         <div class="mb-10">
           <h3 class="text-lg font-semibold">GE India Innovation Center</h3>
-          <p class="text-sm text-gray-600 mb-2">
+          <p class="text-sm text-gray-400 mb-2">
             System Analyst • Apr 2006 – May 2011 • Hyderabad, India
           </p>
 
@@ -197,7 +227,7 @@
         <!-- IBM -->
         <div class="mb-10">
           <h3 class="text-lg font-semibold">IBM India Pvt. Ltd.</h3>
-          <p class="text-sm text-gray-600 mb-2">
+          <p class="text-sm text-gray-400 mb-2">
             Senior Developer • Dec 2004 – Apr 2006 • Bangalore, India
           </p>
 
@@ -210,7 +240,7 @@
         <!-- TechSpan / CMC -->
         <div>
           <h3 class="text-lg font-semibold">TechSpan / CMC Ltd.</h3>
-          <p class="text-sm text-gray-600 mb-2">
+          <p class="text-sm text-gray-400 mb-2">
             Senior Associate / Project Assignee • 2003 – 2004 • India
           </p>
 
@@ -256,5 +286,15 @@
 
     </main>
   </div>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    const root = document.documentElement;
+    root.classList.toggle('dark');
+    localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
+  }
+</script>
+
 </body>
 </html>
